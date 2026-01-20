@@ -1,85 +1,314 @@
-# Hetal Patel - Portfolio Website
+# Portfolio Website
 
-A modern portfolio website showcasing my work as a Senior Software Engineer specializing in Unity, AR/VR development, team leadership, and project management.
+A modern, responsive portfolio website showcasing projects, skills, experience, and recommendations. Built with Next.js and React.
 
-## 👋 About Me
+## 🚀 Technologies & Skills Used
 
-**Hetal Patel** - Cyber Security Specialist • Senior Software Engineer (Unity/AR/VR) • Team Lead • Project Manager
+### Core Framework & Language
+- **Next.js 16.1.1** - React framework for production
+  - App Router architecture
+  - Server-side rendering (SSR)
+  - Static site generation (SSG)
+  - Client-side navigation
+- **React 19.2.3** - UI library
+  - Functional components with hooks
+  - Context API for state management
+  - Component composition
+- **TypeScript 5** - Type-safe JavaScript
+  - Type definitions
+  - Interface definitions
+  - Type checking
 
-Experienced Software Engineer and Cyber Security Specialist with **10+ years** delivering high-quality mobile (Android/iOS), PC, AR/VR, and cross-platform experiences. Currently specializing in container security, CI/CD pipeline security, and cloud infrastructure protection. Leading teams, optimizing performance, and building scalable, secure systems. From conception to production, I transform ideas into polished, secure, and engaging interactive experiences.
+### Styling & UI
+- **CSS3** - Custom styling
+  - CSS Grid for layouts
+  - Flexbox for component alignment
+  - CSS animations and transitions
+  - Responsive design with media queries
+  - Custom scrollbars
+  - Gradient backgrounds
+  - Box shadows and visual effects
+- **Tailwind CSS 4** - Utility-first CSS framework (via PostCSS)
 
-### Key Highlights
+### State Management
+- **React Context API** - Global state management
+  - SectionContext for managing collapsible sections
+  - Provider pattern implementation
+- **React Hooks**
+  - `useState` - Component state
+  - `useEffect` - Side effects and lifecycle
+  - `useMemo` - Performance optimization
+  - `useRef` - DOM references
 
-- 🔒 **Cyber Security Specialist** - Container & CI/CD Security
-- 🎮 **10+ years** Software Engineer Experience
-- 👥 **6+ Team Members** Led
-- 🥽 **AR/VR Specialist** - ARCore, ARKit, Vuforia
-- ⚡ **Performance Optimization** Expert
-- 📱 **Mobile Game Development** - Published 20+ games on Google Play & App Store
+### Features & Functionality
 
-## 🌐 Live Site
+#### UI/UX Features
+- **Collapsible Sections** - Expandable/collapsible content sections
+- **Smooth Animations** - CSS transitions and transforms
+- **Scroll Animations** - RevealOnScroll component for scroll-triggered animations
+- **Modal Popups** - Project detail modals with full descriptions
+- **Responsive Design** - Mobile-first, adaptive layouts
+- **Interactive Navigation** - Smooth scrolling and hash navigation
 
-**[hetalpateldev.github.io](https://hetalpateldev.github.io)**
+#### Project Features
+- **Project Filtering** - Category-based filtering (All, Mobile, PC Games, VR)
+- **Dynamic Grid Layout** - CSS Grid with auto-fill for responsive project cards
+- **Video Embedding** - YouTube and Vimeo video support
+- **Thumbnail Display** - Image thumbnails with clickable overlays
+- **Project Cards** - Dynamic sizing based on content
+- **Category Badges** - Technology tags display
 
-## 💼 Professional Experience
+#### Data Management
+- **JSON Data Files** - Structured data storage
+  - `projects.json` - Project information
+  - `skills.json` - Skills and technologies
+  - `experience.json` - Work experience
+  - `recommendations.json` - Client testimonials
+  - `education.json` - Educational background
 
-### Current Role
-**Cyber Security Specialist** @ **Sepal AI**  
-*Oct 2025 – Present · 4 mos | Ontario, Canada · Remote*
+### Development Tools
+- **ESLint** - Code linting and quality
+- **TypeScript Compiler** - Type checking
+- **Next.js Dev Server** - Hot module replacement
+- **Babel Plugin React Compiler** - React optimization
 
-Specializing in container security, CI/CD pipeline security, and cloud infrastructure protection. Ensuring secure software delivery and maintaining robust security postures across development and deployment environments.
+### Web Technologies
+- **HTML5** - Semantic markup
+- **CSS3** - Advanced styling
+  - CSS Variables
+  - CSS Grid
+  - Flexbox
+  - Animations & Transitions
+  - Media Queries
+- **JavaScript (ES6+)** - Modern JavaScript features
+  - Arrow functions
+  - Destructuring
+  - Template literals
+  - Async/await
+  - Modules
 
-**Key Responsibilities:**
-- Implement and maintain container security best practices for Kubernetes and Docker environments
-- Secure CI/CD pipelines by integrating security checks into GitHub Actions and Jenkins workflows
-- Conduct security assessments and vulnerability scanning of containerized applications
-- Develop and enforce security policies for container orchestration and microservices architecture
-- Monitor and respond to security incidents in cloud and container environments
-- Collaborate with DevOps teams to integrate security into the software development lifecycle
-- Perform security audits and compliance checks for container deployments
+### Browser APIs Used
+- **Intersection Observer API** - Scroll animations (via RevealOnScroll)
+- **History API** - URL hash management
+- **Fetch API** - Data fetching (if needed)
+- **Window API** - Browser window operations
 
-**Technologies:** Container Security (Kubernetes, Docker), CI/CD Pipeline Security (GitHub Actions, Jenkins), Cloud Security, Vulnerability Management, Security Automation
+### Architecture Patterns
+- **Component-Based Architecture** - Reusable React components
+- **Context Pattern** - Global state management
+- **Props Pattern** - Component communication
+- **Custom Hooks** - Reusable logic
+- **Separation of Concerns** - Components, data, and styles separated
 
-### Previous Roles
-- **Software Engineer - Team Lead & Project Manager** @ Utherverse Digital Inc. (Oct 2022 – Sept 2025)
-- **Senior Unity Developer** @ Relish Studios (Jun 2022 – Sept 2022)
-- **Senior Unity Mobile VR/AR Developer** @ Snapd Inc. (Jun 2021 – May 2022)
-- **Senior Developer & Team Leader** @ Narola Infotech Solution LLP (Nov 2017 – Jun 2021)
+## 📁 Project Structure
 
-## 🛠️ Technical Skills
+```
+portfolio/
+├── app/
+│   ├── globals.css          # Global styles
+│   ├── layout.tsx           # Root layout with providers
+│   └── page.tsx             # Main page component
+├── components/
+│   ├── CollapsibleSection.tsx    # Reusable collapsible section
+│   ├── Contact.tsx               # Contact section
+│   ├── EducationSection.tsx      # Education display
+│   ├── ExperienceSection.tsx     # Work experience
+│   ├── Footer.tsx                # Footer component
+│   ├── HashNavigation.tsx        # Hash-based navigation
+│   ├── Hero.tsx                  # Hero/landing section
+│   ├── Navbar.tsx                # Navigation bar
+│   ├── ProjectCard.tsx           # Individual project card
+│   ├── ProjectsSection.tsx       # Projects grid with filters
+│   ├── RecommendationsSection.tsx # Testimonials
+│   ├── RevealOnScroll.tsx        # Scroll animation wrapper
+│   └── SkillsSection.tsx         # Skills display
+├── contexts/
+│   └── SectionContext.tsx        # Global section state
+├── data/
+│   ├── education.json            # Education data
+│   ├── experience.json           # Experience data
+│   ├── projects.json             # Projects data
+│   ├── recommendations.json      # Recommendations data
+│   └── skills.json               # Skills data
+└── package.json                  # Dependencies
+```
 
-### Languages & Frameworks
-- **C#** - Expert
-- **C/C++** - Advanced
-- **Python** - Intermediate
-- **.NET** - Advanced
+## 🎨 Key Features
 
-### Specialties
-- 🔒 **Cyber Security** (Container Security, CI/CD Security, Cloud Security)
-- 🎮 Game Development (Unity3D & XR Platforms)
-- 🥽 AR/VR Development (Vuforia, ARCore, ARKit)
-- ⚡ Performance Optimization (Memory, GC, Draw Calls)
-- 🔄 CI/CD & DevOps (Automated Pipelines, Security Integration)
-- 🗄️ Backend Services (RESTful APIs & Databases)
-- 📊 Project Management (Agile & Team Coordination)
+### 1. Collapsible Sections
+- All major sections can be expanded/collapsed
+- Clicking navigation tabs opens the corresponding section
+- Only one section open at a time
+- Smooth animations
 
-## 🎯 Featured Projects
+### 2. Project Showcase
+- Grid layout with category filtering
+- Project cards with thumbnails/videos
+- Modal popups with full project details
+- Technology badges
+- Links to demos and videos
 
-- **The Ride of Moon** - 2D fast-paced mobile game (Unity, C#)
-- **Wizard of Oz: Idle Merge** - Mobile merge game (iOS & Android)
-- **Neighbur AR App** - Community platform with AR features
-- **VR Game Proto** - VR environment prototype with Oculus 2
-- **20+ Published Games** on Google Play & App Store
+### 3. Responsive Design
+- Mobile-first approach
+- Adaptive grid layouts
+- Touch-friendly interactions
+- Optimized for all screen sizes
 
-## 📚 Education
+### 4. Interactive Elements
+- Hover effects on cards and buttons
+- Smooth scrolling navigation
+- Animated section reveals
+- Modal overlays with backdrop
 
-**Bachelor of Engineering in Computer Science** (2012-2015)
+## 🛠️ Installation & Setup
 
-## 📧 Contact
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-- 📧 **Email:** [hetalpatel1794@gmail.com](mailto:hetalpatel1794@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/hetalpatel-unitydeveloper](https://linkedin.com/in/hetalpatel-unitydeveloper)
-- 🐙 **GitHub:** [github.com/hetalpatel1794](https://github.com/hetalpatel1794)
+### Installation Steps
 
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd portfolio
+   ```
 
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Start production server**
+   ```bash
+   npm start
+   ```
+
+## 📝 Configuration
+
+### Environment Variables
+No environment variables required for basic functionality.
+
+### Data Management
+All data is stored in JSON files in the `data/` directory:
+- Edit JSON files to update content
+- No database required
+- Static data for fast loading
+
+## 🎯 Skills Demonstrated
+
+### Frontend Development
+- ✅ React component architecture
+- ✅ TypeScript type safety
+- ✅ Responsive CSS design
+- ✅ Modern JavaScript (ES6+)
+- ✅ State management patterns
+- ✅ Component composition
+- ✅ Performance optimization
+
+### UI/UX Design
+- ✅ User interface design
+- ✅ User experience optimization
+- ✅ Animation and transitions
+- ✅ Accessibility considerations
+- ✅ Mobile responsiveness
+
+### Web Development
+- ✅ Next.js framework
+- ✅ Static site generation
+- ✅ Client-side routing
+- ✅ Hash navigation
+- ✅ Modal implementations
+- ✅ Form handling
+
+### Code Quality
+- ✅ TypeScript for type safety
+- ✅ ESLint for code quality
+- ✅ Component reusability
+- ✅ Clean code practices
+- ✅ Separation of concerns
+
+## 📦 Dependencies
+
+### Production Dependencies
+- `next` - Next.js framework
+- `react` - React library
+- `react-dom` - React DOM rendering
+
+### Development Dependencies
+- `typescript` - TypeScript compiler
+- `@types/node` - Node.js type definitions
+- `@types/react` - React type definitions
+- `@types/react-dom` - React DOM type definitions
+- `eslint` - Code linting
+- `eslint-config-next` - Next.js ESLint config
+- `tailwindcss` - CSS framework
+- `@tailwindcss/postcss` - Tailwind PostCSS plugin
+- `babel-plugin-react-compiler` - React compiler
+
+## 🚀 Deployment
+
+The project is configured for static export:
+- `output: "export"` in `next.config.js`
+- Can be deployed to any static hosting service
+- Compatible with Vercel, Netlify, GitHub Pages, etc.
+
+### GitHub Pages Deployment
+
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Set Source to "GitHub Actions"
+
+2. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+3. **Automatic Deployment**:
+   - The `.github/workflows/pages.yml` workflow will automatically build and deploy your site
+   - Your site will be available at `https://<username>.github.io/<repository-name>`
+
+4. **Manual Build**:
+   ```bash
+   npm run build
+   ```
+   The static files will be in the `out/` directory.
+
+### GitHub Actions CI/CD
+
+The project includes GitHub Actions workflows:
+- **Build workflow** (`.github/workflows/deploy.yml`): Runs on push/PR to validate builds
+- **Pages workflow** (`.github/workflows/pages.yml`): Automatically deploys to GitHub Pages
+
+Both workflows:
+- Use Node.js 20
+- Install dependencies with `npm ci`
+- Run linting
+- Build the project
+- Deploy to GitHub Pages (pages workflow only)
+
+## 📄 License
+
+Private project - All rights reserved
+
+## 👤 Author
+
+**Hetal Patel**
+- Portfolio: [hetalpateldev.github.io](https://hetalpateldev.github.io)
+- LinkedIn: [linkedin.com/in/hetalpatel-unitydeveloper](https://linkedin.com/in/hetalpatel-unitydeveloper)
+
+---
+
+Built with ❤️ using Next.js and React
